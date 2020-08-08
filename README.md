@@ -15,7 +15,7 @@ This project was created to practise and implement the following concepts:
 * Functional components and using React Hooks to manage state
 * Testing API calls
 
-## Tech stack
+## Tech stack
 
 * React
 * NPM
