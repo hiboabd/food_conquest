@@ -5,7 +5,7 @@ script:
 - npm test
 - npm run build
 deploy:
+  provider: heroku
+  app: food-conquest
   api_key:
-    provider: heroku
-    app: food-conquest
     secure: DFNKIAnvqWHSpA/84nDUyYl0nZ4KWjwQEGo7S14scUV2m6cNLKX2j2OFYOpEt80DM/DotB2H28D9qN9WvjDiXuWmoEA0lTX4AuxM9OWC0HfwM6q3Ps4SRk4pm7uZ/C0DtqKaFsegx+GrUgirQjNWqQDv6nSXDHWnU4qBkW+YQjlSqSz4MA6QGpTw43mOmZopoaOfbIpea/lSrEzBw3rurtv7fYbBiQsWs+gdyn9mDsyWzePcw11r8u1tDX3pnA9pt0ck/PIC5T/08qEI++tBUiigAEjZ1viCpihrPAn5dnCfmlZToHWXJO7GWLW7hzIDWBcV3KpeaI6KEcp9pdhkMWL16yYgmjTHobMuHV2u5btCoDQelWGwS0txYgkW+/0bzdzLbIh3Pxed0cOAuauAhDpYJTPnaT3upMCzYCrmrBh5YuiP3kKEPG2zBIYkbMQjEbq0d8ZLd2kwq8ZSWU6xHFsh4YT+9leqCus2u0aCvXpu6fLmgLAYgMnUvcCxEkb/CJ+4feL+vanMqW+Kk+h3EBnh28FuHKuHPQKxsuoQ6Xl/8ajfRW6Vogs3Int+qZOngKWcB+qOyj/4LjkocVHbHnr/kw4N7X+l7k4godcJpXEHucWTZbz1NupRgv29q4kh+hiXw8tF66xeFi/X42D2rZCg/rELvvk59SxlI+2UqWs=
