@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Home from './components/Home';
+import Home from './components/home';
 
-test('renders learn react link', () => {
+test('renders home page with title', () => {
   const { getByText } = render(<Home />);
   const linkElement = getByText(/Instagram Feed/i);
   expect(linkElement).toBeInTheDocument();
