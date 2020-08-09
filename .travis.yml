@@ -1,7 +1,11 @@
 language: node_js
 node_js:
-  - "12"
-
+- '12'
 script:
-  - npm test
-  - npm run build
+- npm test
+- npm run build
+deploy:
+  api_key:
+    provider: heroku
+    app: food-conquest
+    secure: process.env.HEROKU_API
