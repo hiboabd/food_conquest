@@ -1,4 +1,5 @@
 # food_conquest
+[![Build Status](https://travis-ci.org/hiboabd/food_conquest.svg?branch=master)](https://travis-ci.org/hiboabd/food_conquest)
 
 ## Description
 
