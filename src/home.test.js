@@ -1,9 +1,45 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, act, cleanup } from '@testing-library/react';
 import Home from './components/home';
+const axios = require('axios')
 
-test('renders home page with title', () => {
-  const { getByText } = render(<Home />);
-  const linkElement = getByText(/Instagram Feed/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock('axios')
+
+beforeEach(() => {
+  axios.get = jest.fn(() => Promise.resolve({
+    data:
+      {
+        data: [
+          {
+            id: 1,
+            media_type: 'Test media type',
+            media_url: 'Test media url',
+          },
+          {
+            id: 2,
+            media_type: 'Test media type',
+            media_url: 'Test media url',
+          }
+        ]
+      }
+  }))
+})
+
+afterEach(cleanup)
+
+it('renders home page with title', async () => {
+  await act( async () => {
+    const { getByText } = render(<Home />);
+    const textElement = getByText(/Instagram Feed/i);
+    expect(textElement).toBeInTheDocument();
+  });
+
+});
+
+it('returns home page with two image posts', async () => {
+  await act( async () => {
+    const {findAllByAltText } = render(<Home />);
+    const items = await findAllByAltText(/instagram post/)
+    expect(items).toHaveLength(2)
+  });
 });
