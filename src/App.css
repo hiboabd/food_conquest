@@ -25,12 +25,14 @@
 
 .insta-feed{
   margin: 20px;
+  max-width: 90vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 300px;
-  grid-gap: 10px;
-  grid-auto-flow: dense;
-  max-width: 80vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
 }
 
 .gallery-item {
@@ -75,3 +77,10 @@ h1 {
     max-width: 100vw;
   }
 }
+
+/* display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: 300px;
+grid-gap: 10px;
+grid-auto-flow: dense;
+max-width: 80vw; */
