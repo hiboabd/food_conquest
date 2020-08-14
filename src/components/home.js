@@ -12,8 +12,7 @@ function Home() {
   useEffect(() => {
     async function fetchData(){
 
-      const response = await axios.get(`https://graph.instagram.com/me/media?fields=
-        id,media_type,media_url&access_token=${process.env.REACT_APP_IG_ACCESS_TOKEN}`)
+      const response = await axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url&access_token=${process.env.REACT_APP_IG_ACCESS_TOKEN}`)
       setPosts(response.data.data)
     }
     fetchData();
@@ -21,7 +20,7 @@ function Home() {
 
   return (
     <div className="Home">
-      <h1> Instagram Feed </h1>
+      <a href="https://www.instagram.com/foodconquest_/"> <h3> Check out my instagram for more</h3> </a> 
       <div className="insta-feed" data-testid="post">
       {posts.map((post, index) => (
         <Post
