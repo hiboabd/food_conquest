@@ -9,8 +9,8 @@ function NavigationBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="/">Instagram Feed</Nav.Link>
-          <Nav.Link href="/favourites">Favourites</Nav.Link>
+          <Nav.Link data-testid="feed" href="/">Instagram Feed</Nav.Link>
+          <Nav.Link data-testid="favourites" href="/favourites">Favourites</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
