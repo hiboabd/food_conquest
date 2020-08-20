@@ -29,8 +29,8 @@ afterEach(cleanup)
 
 it('renders home page with title', async () => {
   await act( async () => {
-    const { getByText } = render(<Home />);
-    const textElement = getByText(/Instagram Feed/i);
+    const { findByText } = render(<Home />);
+    const textElement = await findByText(/Check out my instagram for more/i);
     expect(textElement).toBeInTheDocument();
   });
 
